@@ -12,12 +12,14 @@ body {
 
 /* Navigation Bar at Top */
 .navbar {
-    background-color: #333;
+    background-color: transparent;
     padding: 1rem 0;
-    position: sticky;
+    position: absolute;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    box-shadow: none;
 }
 
 .nav-container {

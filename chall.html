@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        /* CSS RULES IMPORTS */
+        @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+        /* VARIABLES DECLARATION */
+        :root{
+            --light: #f1f1f1;
+            --dark: #282828;
+            --articles: #fefefe;
+            --headings: #6b85b8;
+            --hero-blue: #7dd1fb;
+            --hero-green: #7dfbcf;
+            --hero-pink: #fc9dff;
+        }
+        /* #region GLOBAL PARAMETERS*/
+        body{
+            font-family: "Poiret One", sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, p{
+            font-weight: 400;
+            margin: 0.7rem 0;
+        }
+        h1{
+            font-family: "Bodoni Moda", serif;
+            font-weight: 550;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+       
+        .position-container{;
+            position: relative;
+            background-color: var(--hero-blue);
+            width: 320px;
+            height: 320px;
+            left: 40px;
+            top: 40px;
+        }
+        .div1{
+            position: absolute;
+            background-color: var(--hero-pink);
+            width: 68px;
+            height: 68px;
+            bottom: -34px;
+            left: -34px;
+       
+         }
+        .div2{
+            position: absolute;
+            background-color: var(--hero-pink);
+            width: 68px;
+            height: 68px;
+            bottom: -34px;
+            right: -34px;
+         }
+
+        .div3{
+            position: absolute;
+            background-color: var(--hero-pink);
+            width: 68px;
+            height: 68px;
+            top: -34px;
+            left: -34px;
+        }
+        .div4{
+            position: absolute;
+            background-color: var(--hero-pink);
+            width: 68px;
+            height: 68px;
+            top: -34px;
+            right: -34px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="position-container">
+        <h2>The "Container"</h2> 
+        <div class="div1">Div One</div>
+        <div class="div2">Div Two</div>
+        <div class="div3">Div Three</div>
+        <div class="div4">Div Four</div>
+        <div>
+        </div> class="button fixed>back top to top" <div>
+
+        </div>
+</body>
+</html>
