@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in Html</title>
+    <style>
+        /* #region GLOBAL PARAMETERS */
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: #f1f1f1;
+            color: #353535;
+        }
+        /* ALL HEADINGS */
+        h1, h2, h3{
+            font-weight: 300;
+            margin: 0.6rem 0;
+            color: #6688aa;
+        }
+        /* #endregion */
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #22222233;
+    }
+    li{
+        position: relative;
+        display: inline-block;
+        background-color: #22222233;
+        padding: 0.4rem 1rem;
+    }
+    ul li ul li{
+        display: list-item;
+    }
+    ul ul{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+    }
+    </style>
+</head>
+<body>
+    <!-- GLOBAL HEADER -->
+    <header id="header-main">
+        <h1>Lists in HTML?</h1>
+    </header>
+    <!-- GLOBAL CONTENT -->
+     <main>
+        <section>
+            <ul>
+                <li>List Item One</li>
+                <li>List Item Two</li>
+                <li>List Item Three</li>
+                <li>List Item Four
+                    <ul>
+                        <li>Nested A</li>
+                        <li>Nested B</li>
+                        <li>Nested C</li>
+                    </ul>
+                </li>
+                <li>List Item Five</li>
+            </ul>
+        </section>
+     </main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex?</title>
+        <style>
+        /* CSS RULES IMPORTS */
+        @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+        /* VARIABLES DECLARATION */
+        :root{
+            --light: #f8f8f8;
+            --dark: #a65959;
+            --articles: #dea4b2;
+            --headings: #94b47a;
+        }
+        /* #region GLOBAL PARAMETERS*/
+        body{
+            font-family: "Poiret One", sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, p{
+            font-weight: 500;
+            margin: 0.7rem 0;
+        }
+        h1{
+            font-family: 'Bodoni Moda', serif;
+            font-weight: 550;
+        }
+        /* #endregion */
+        #header-main{
+            background-color: var(--dark);
+            padding: 2rem;
+            color: var(--light);
+        }
+        .section-flex > div{
+            display: flex;
+            justify-content: space-around;
+            gap: 0.5rem;
+            background-color: #be8bb8;
+        }
+        .section-flex > div > div{
+            padding: 1rem;
+            background-color: #7f9ec1;
+            color: var(--light);
+        }
+        /* #region NAVBAR */
+        #nav-main{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+        #nav-main > ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #nav-main > ul a{
+            color: var(--light);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: 400ms ease-in-out;
+        }
+        #nav-main ul a:hover{
+            background-color: #74a890c3;
+        }
+        #nav-main a.auth-link{
+            background-color: #87b351;
+        }
+        #nav-main a.auth-link:hover{
+            background-color: #7eacda;
+        }
+        /* #endregion */
+        
+        @media (min-width: 600px){
+            #nav-main ul{
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GLOBAL HEADER -->
+    <header id="header-main">
+        <h1>Flexbox Example</h1>
+        <h1>An exercise in FLex and Grid</h1>
+    </header>
+    <!-- GLOBAL NAVBAR -->
+     <nav id="nav-main">
+        <ul>
+            <li><a href="#">Link One</a></li>
+            <li><a href="#">Link Two</a></li>
+            <li><a href="#">Link Three</a></li>
+            <li><a href="#">Link Four</a></li>
+            <li><a href="#" class="auth-link">SignIn</a></li>
+            <li><a href="#" class="auth-link">SignUp</a></li>
+        </ul>
+     </nav>
+    <!-- GLOBAL CONTENT -->
+     <section class="section-flex">
+        <h2>What is Flexbox?</h2>
+        <!-- THIS IS THE "FLEXBOX" CONTAINER, ALL THE CHILDREN ELEMENTS WILL BE FLEX ITEMS -->
+        <div>
+            <div>Div 1</div>
+            <div>Div 2</div>
+            <div>Div 3</div>
+        </div>
+     </section>
+</body>
+</html>
