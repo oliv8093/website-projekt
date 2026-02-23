@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORMS</title>
+    <style>
+/* #region GLOBAL STYLES*/
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;400;500;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+/* VARIABLES IN HTML: */
+:root {
+    --light: #eee;
+    --medium: #666;
+    --dark: #333;
+    --black: #222;
+    --blue-light: #4ae;
+    --blue-dark: #158;
+    --red-light: #f44;
+    --red-medium: #c00;
+    --red-dark: #900;
+    --green-light: #8d8;
+    --green-dark: #585;
+}
+body{
+    font-family:'Smooch Sans', sans-serif; /*"SMOOCH SANS" IS A GOOGLE FONT*/
+    font-weight: 400;
+    background-color: var(--light);
+}
+
+/* TEXT FORMATTING */
+h1, h2, h3, h4{
+    margin: 0;
+    font-weight: 400;
+}
+/* #endregion */
+    /* FORM STYLING */
+    form{
+        background-color: #fff;
+        padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+    }
+    form fieldset input{
+        margin-bottom: 0.6rem;
+    }
+    fieldset label, fieldset input{
+        display: block;
+        width: 98.2%;
+    }
+    fieldset textarea{
+        width: 98.67%;
+    }
+    input[type='reset']{
+        width: 100%;
+    }
+    input[type='submit']{
+        width: 100%;
+    }
+    textarea{
+        resize: none;
+    }
+    </style>
+</head>
+<body>
+                <form action="thanks.html">
+            <fieldset>
+                <legend><h2>Legend</h2></legend>
+                <label for="txtName">Fulde Navn</label>
+                <input type="text" name="txtName" id="txtName" placeholder="Dit Fulde Navn" pattern="[a-z,A-Z, ÆØÅ, æøå]{2}" required>
+                <label for="txtNumber">Tlf-Nummer</label>
+                <input type="tel" id="txtNumber" placeholder="1234 5678" pattern="[0-9, ]{9}" required>
+                <label for="txtEmail">Din Email</label>
+                <input type="email" id="txtEmail" placeholder="din@email.XX" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                <textarea name="txtArea" rows="8" id="txtArea" placeholder="Skriv noget her:"></textarea>
+                <input type="reset" value="Annuller">
+                <input type="submit" value="Send">
+            </fieldset>
+        </form>
+</body>
